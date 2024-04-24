@@ -12,6 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { WelcomeComponent } from './pages/home/components/welcome/welcome.component';
 import { FormsModule } from '@angular/forms';
 import { TarefasComponent } from './pages/home/components/tarefas/tarefas.component';
+import { AddusersComponent } from './pages/home/components/addusers/addusers.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { TarefasComponent } from './pages/home/components/tarefas/tarefas.compon
     NavbarComponent,
     UsersComponent,
     WelcomeComponent,
-    TarefasComponent
+    TarefasComponent,
+    AddusersComponent
   ],
   imports: [
     BrowserModule,

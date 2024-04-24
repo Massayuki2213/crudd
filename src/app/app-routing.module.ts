@@ -6,6 +6,7 @@ import { UsersComponent } from './pages/home/components/users/users.component';
 import { WelcomeComponent } from './pages/home/components/welcome/welcome.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { TarefasComponent } from './pages/home/components/tarefas/tarefas.component';
+import { AddusersComponent } from './pages/home/components/addusers/addusers.component';
 
 const routes: Routes = [
   {path: "", redirectTo: "/login", pathMatch: 'full'},
@@ -18,6 +19,7 @@ const routes: Routes = [
       {path: "", component: WelcomeComponent},
       {path: "users", component: UsersComponent},
       {path: "tarefas", component: TarefasComponent},
+      {path: "addusers", component: AddusersComponent},
     ]
   }
 ]
