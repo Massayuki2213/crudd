@@ -21,8 +21,12 @@
           <a class="nav-link" [routerLink]="['/app/addusers']" (click)="setActiveLink('addusers')" [class.active]="activeLink === 'addusers'">Add Users</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/app/editusers']" (click)="setActiveLink('editusers')" [class.active]="activeLink === 'editusers'">Edit users</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" [routerLink]="['/app/tarefas']" (click)="setActiveLink('tarefas')" [class.active]="activeLink === 'tarefas'">Tarefas</a>
         </li>
+        
       </ul>
       <form class="d-flex" role="search">
         <button class="btn btn-outline-danger" routerLink="/">Logout</button>

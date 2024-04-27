@@ -13,6 +13,7 @@ import { WelcomeComponent } from './pages/home/components/welcome/welcome.compon
 import { FormsModule } from '@angular/forms';
 import { TarefasComponent } from './pages/home/components/tarefas/tarefas.component';
 import { AddusersComponent } from './pages/home/components/addusers/addusers.component';
+import { EditusersComponent } from './pages/home/components/editusers/editusers.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { AddusersComponent } from './pages/home/components/addusers/addusers.com
     UsersComponent,
     WelcomeComponent,
     TarefasComponent,
-    AddusersComponent
+    AddusersComponent,
+    EditusersComponent
   ],
   imports: [
     BrowserModule,

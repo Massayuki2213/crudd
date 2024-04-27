@@ -1,8 +1,51 @@
-<div class="container-fluid">
-  <div class="row  align-items-center text-center full-height">
-    <div class="col">
-      <h1>Welcome to users page</h1>
-      <h2>Here you can start building your amazing angular application</h2>
-    </div>
-  </div>
+<h1 class="text-center mt-4 mb-5">Usuários</h1>
+<div style="display: flex; justify-content: center; max-width: 350px; margin: 0 auto;" class="mb-3">
+<input type="text" [(ngModel)]="novoNome" placeholder="Digite sua tarefa..." class="form-control" style="margin-right: 10px;">
+<button class="btn btn-primary" style="width: 110px;  display:flex; justify-content: center;" (click)="adicionarUsuario()">
+
+  <i class="bi bi-plus-square-fill"></i>
+</button>
 </div>
+<table class="table">
+  
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>E-mail</th>
+      <th>Função</th>
+      <th>Editar</th>
+      <th>Excluir</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Exemplo de item da lista -->
+    <tr *ngFor="let task of task">
+      <td>
+        <div class="nome" *ngIf="task.nome">
+          <span>{{ task.nome }}</span>
+        </div>
+      </td>
+      <td>
+        <div class="email" *ngIf="task.email">
+          <span>{{ task.email }}</span>
+        </div>
+      </td>
+      <td>
+        <div class="cargo" *ngIf="task.cargo">
+          <span>{{ task.cargo }}</span>
+        </div>
+      </td>
+      <td>
+        <button class="btn btn-primary" >
+          <i class="fas fa-pencil-alt"></i> Editar
+        </button>
+      </td>
+      <td>
+        <button class="btn btn-danger" (click)="excluirUsuario(task)">
+          <i class="fas fa-times"></i> Excluir
+        </button>
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
