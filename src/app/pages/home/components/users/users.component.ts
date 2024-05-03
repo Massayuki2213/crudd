@@ -8,8 +8,8 @@ import { Router, Routes } from '@angular/router';
 })
 export class UsersComponent {
   task = [
-    { nome: 'Alice Mayer', email: 'alice@example.com', cargo: 'Engenheiro de FE' },
-    { nome: 'Antonio Guilherme', email: 'guilherme@example.com', cargo: 'Engenheiro de FB' }
+    { nome: 'Alice Mayer', email: 'alice@example.com', cargo: 'Engenheiro de FE', senha:'123456'},
+   // { nome: 'Antonio Guilherme', email: 'guilherme@example.com', cargo: 'Engenheiro de FB', senha:'654321 }
   ];
 
   novoNome: string = '';
@@ -23,7 +23,8 @@ export class UsersComponent {
       const novoUsuario = {
         nome: this.novoNome,
         email: '',
-        cargo: ''
+        cargo: '',
+        senha: ''
       };
       this.task.push(novoUsuario);
       this.novoNome = ''; // Limpa o campo de entrada após adicionar a tarefa
@@ -32,7 +33,7 @@ export class UsersComponent {
 
   editarUsuario(usuario: any): void {
     this.usuarioSelecionado = usuario; // Define o usuário selecionado para edição
-    this.router.navigate(['/app/editusers'], { queryParams: usuario }); // Navega para a tela de edição
+    this.router.navigate(['/app/editusers'], { queryParams: this.task }); // Navega para a tela de edição
   }
  
   excluirUsuario(usuario: any): void {
