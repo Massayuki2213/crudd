@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Router, Routes } from '@angular/router';
 
 @Component({
   selector: 'app-users',
@@ -12,6 +13,10 @@ export class UsersComponent {
   ];
 
   novoNome: string = '';
+  usuarioSelecionado: any;
+  
+  constructor(private router: Router) { }
+ 
 
   adicionarUsuario(): void {
     if (this.novoNome.trim() !== '') {
@@ -25,6 +30,11 @@ export class UsersComponent {
     }
   }
 
+  editarUsuario(usuario: any): void {
+    this.usuarioSelecionado = usuario; // Define o usuário selecionado para edição
+    this.router.navigate(['/app/editusers'], { queryParams: usuario }); // Navega para a tela de edição
+  }
+ 
   excluirUsuario(usuario: any): void {
     this.task = this.task.filter(t => t !== usuario);
   }

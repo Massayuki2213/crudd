@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="card mt-3 mx-auto" style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); margin: 0;">
+    <div class="card mt-3 mx-auto" style="background-color: rgb(33, 37, 41); color: rgb(255, 255, 255); margin: 0;">
       <div class="card-body">
         <h4 class="class-title text-center form-label">Adicionar usuário</h4>
         <form (ngSubmit)="submitForm()" #formulario="ngForm">
@@ -26,12 +26,12 @@
   
           <div class="mb-4">
             <label for="senha" class="form-label mb-3 required">Senha</label>
-            <input type="password" class="form-control" id="senha" name="senha" placeholder="Digite sua senha..." required
+            <input type="password" class="form-control" id="senha" name="senha" placeholder="Digite sua senha..." required maxlength="15"
               [(ngModel)]="usuario.senha" (ngModelChange)="checkSenha()">
             <div *ngIf="senhaInvalida" style="color: red;">A senha deve conter entre 6 e 15 caracteres.</div>
           </div>
   
-          <button type="submit" id="botao-enviar" class="btn btn-primary mb-3" [disabled]="!formulario.valid || senhaInvalida">Enviar</button>
+          <button type="submit" id="botao-enviar" class="btn btn-outline-success btn-lg px-5" [disabled]="!formulario.valid || senhaInvalida">Salvar</button>
         </form>
       </div>
     </div>

@@ -1,5 +1,4 @@
 .container{
-  background-color: rgb(255, 255, 255) !important;
   width: 100%;
 }
 
@@ -31,15 +30,12 @@
     border-radius: 5px;
   }
   
-  .btn-primary {
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    color: white;
-  }
+
   
   .btn-primary:hover {
     background-color: #0056b3;
+  }
+
+  #botao-enviar{
+    width: 100%;
   }
