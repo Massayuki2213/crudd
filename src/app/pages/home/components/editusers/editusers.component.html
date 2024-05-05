@@ -1,18 +1,31 @@
 <div class="container">
     <div class="card mt-3 mx-auto" style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); margin: 0;">
       <div class="card-body">
+
+
         <h4 class="class-title text-center form-label">Editar usuário</h4>
         <form (ngSubmit)="submitForm()" #formulario="ngForm">
+
+
           <div class="mb-4">
             <label for="nome" class="form-label mb-3 required">Nome</label>
             <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome..." required
               [(ngModel)]="usuario.nome">
           </div>
+
+          
           <div class="mb-4">
             <label for="email" class="form-label mb-3 required">E-mail</label>
             <input type="email" class="form-control" id="email" name="email" placeholder="Digite seu e-mail..." required
               [(ngModel)]="usuario.email">
           </div>
+          
+          <div class="mb-4">
+            <label for="cargo" class="form-label mb-3 required">Cargo</label>
+            <input type="cargo" class="form-control" id="cargo" name="cargo" placeholder="Digite seu e-mail..." required
+              [(ngModel)]="usuario.cargo">
+          </div>
+
           <div class="mb-4">
             <label for="cargo" class="form-label required mb-3">Cargo</label>
             <select id="cargo" name="cargo" class="form-select" required [(ngModel)]="usuario.cargo">
